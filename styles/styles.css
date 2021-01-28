@@ -1,0 +1,103 @@
+:root {
+	/* Primary */
+	--Desaturated-Red: hsl(0, 36%, 70%);
+	--Soft-Red: hsl(0, 93%, 68%);
+
+	/* Neutral */
+	--Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+	/* Gradients */
+	--Pink-soft: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+	--Pink-harder: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+
+	display: flex;
+	justify-content: center;
+	font-family: 'Josefin Sans', sans-serif;
+
+	background: var(--Pink-soft);
+}
+
+.ComingSoon {
+	width: 375px;
+
+	background: var(--Pink-soft);
+}
+
+.ComingSoon__padding {
+	box-sizing: border-box;
+	padding: 30px 25px;
+}
+
+.ComingSoon__logo {
+	height: 20px;
+}
+
+.ComingSoon__mainContent {
+	text-align: center;
+}
+
+.ComingSoon__Title {
+	box-sizing: border-box;
+	padding: 0 20px;
+
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: .3em;
+}
+.Title--pink {
+	display: block;
+
+	color: var(--Desaturated-Red);
+	font-weight: 300;
+}
+
+.ComingSoon__text {
+	margin-bottom: 35px;
+
+	line-height: 25px;
+	color: var(--Desaturated-Red);
+}
+
+.ComingSoon__form {
+	position: relative;
+}
+
+.ComingSoon__input {
+	box-sizing: border-box;
+	padding: 12px 20px;
+
+	width: 280px;
+
+	background-color: transparent;
+	border: 1px solid var(--Desaturated-Red);
+	border-radius: 20px;
+}
+.ComingSoon__input::placeholder {
+	color: var(--Desaturated-Red);
+}
+
+.ComingSoon__button {
+	background: var(--Pink-harder);
+
+	padding: 11px 22px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+	right: 21px;
+	top: 0;
+
+	border: none;
+	border-radius: 20px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.23);
+}
+
+
