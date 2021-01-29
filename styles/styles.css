@@ -18,9 +18,14 @@ body {
 
 	display: flex;
 	justify-content: center;
+
 	font-family: 'Josefin Sans', sans-serif;
 
 	background: var(--Pink-soft);
+}
+
+.hidden {
+	display: none;
 }
 
 .ComingSoon {
@@ -38,6 +43,13 @@ body {
 	height: 20px;
 }
 
+.thumbnail__mobile {
+	display: block;
+}
+.thumbnail__desktop {
+	display: none;
+}
+
 .ComingSoon__mainContent {
 	text-align: center;
 }
@@ -53,14 +65,16 @@ body {
 .Title--pink {
 	display: block;
 
-	color: var(--Desaturated-Red);
 	font-weight: 300;
+	 
+	color: var(--Desaturated-Red);
 }
 
 .ComingSoon__text {
 	margin-bottom: 35px;
 
 	line-height: 25px;
+	
 	color: var(--Desaturated-Red);
 }
 
@@ -75,6 +89,7 @@ body {
 	width: 280px;
 
 	background-color: transparent;
+
 	border: 1px solid var(--Desaturated-Red);
 	border-radius: 20px;
 }
@@ -100,4 +115,110 @@ body {
 	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.23);
 }
 
+.Form__iconError {
+	position: absolute;
+	right: 90px;
+	top: 50%;
+	transform: translateY(-50%);
+
+	z-index: 50;
+}
+
+.Form__messageError {
+	color: var(--Desaturated-Red);
+}
+
+
+	/*media queries*/
+
+@media (min-width: 1200px){
+
+	body {
+		align-items: center;
+		justify-content: center;
+
+		background: none;
+	}
+	
+	.ComingSoon {
+		width: 1200px;
+		height: 800px;
+
+		position: relative;
+
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+
+		display: grid;
+		grid-template: 130px 1fr / 1fr 1fr ;
+		grid-template-areas: "header thumbnail" 
+												 "form   thumbnail";
+		column-gap: 119px;
+	}
+	.ComingSoon::before {
+		content: '';
+
+		display: block;
+
+		width: 600px;
+		height: 100%;
+
+		background-image: url(../images/bg-pattern-desktop.svg);
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+	}
+
+	.ComingSoon__padding {
+		padding: 30px 0 30px 110px;
+	}
+
+	.ComingSoon__header {
+		grid-area: header;
+
+		display: flex;
+		align-items: center;
+
+		z-index: 20;
+	}
+
+	.ComingSoon__thumbnail {
+		grid-area: thumbnail;
+
+		z-index: 40;
+	}
+	.thumbnail__desktop {
+		display: block;
+	}
+	.thumbnail__mobile {
+		display: none;
+	}
+
+	.ComingSoon__mainContent {
+		text-align: left;
+
+		padding-top: 60px;
+
+		z-index: 30;
+	}
+
+	.ComingSoon__Title {
+		padding: 0 20px 0 0;
+
+		font-size: 50px;
+	}
+
+	.ComingSoon__button {
+		width: 75px;
+
+		right: 40px;
+	}
+
+	.Form__iconError {
+		right: 130px;
+	}
+
+}
 
